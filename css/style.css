@@ -1,0 +1,246 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* FullPage CSS */
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Customedly styled CSS */
+
+body {
+  background:
+    linear-gradient(
+    rgba(70, 132, 153, 0.9),
+    rgba(70, 132, 153, 0.9)
+    ),
+    url("../images/index-background.jpg");
+  height: 100vh;
+  width: 100vw;
+  background-repeat:no-repeat;
+  background-size: cover;
+  /*border: 1px solid red;*/
+  overflow: hidden;
+  color: #f9f9f9;
+}
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+    .title {
+      /*border: 1px solid red;*/
+      font-size: 500%;
+    }
+
+    .desc {
+      /*border: 1px solid red;*/
+      font-size: 200%;
+      margin: 0 0 5vh 0;
+    }
+
+    .start {
+      border: 3px solid #f9f9f9;
+      border-radius: 5px;
+      font-size: 300%;
+      padding: 2vh 4vw 2vh;
+      margin: 2vh;
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Arrows CSS */
+
+    @-moz-keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        transform: translateY(0);
+      }
+      40% {
+        -moz-transform: translateY(-30px);
+        transform: translateY(-30px);
+      }
+      60% {
+        -moz-transform: translateY(-15px);
+        transform: translateY(-15px);
+      }
+    }
+
+    @-webkit-keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      40% {
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+      }
+      60% {
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+      }
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+      }
+      40% {
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
+      }
+      60% {
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
+      }
+    }
+
+    .arrow {
+      left: 50%;
+      width: 40px;
+      height: 40px;
+      background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
+      background-size: contain;
+    }
+
+    .bounce {
+      -moz-animation: bounce 2s infinite;
+      -webkit-animation: bounce 2s infinite;
+      animation: bounce 2s infinite;
+    }
+
+  /* Options of Intro CSS */
+
+  .choose {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    width: 100vw;
+  }
+
+    .option {
+      font-size: 200%;
+      padding: 8vh 4vw 8vh 4vw;
+      border: 3px solid #f9f9f9;
+      border-radius: 5px;
+      color: inherit;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .chooser {
+      font-size: 200%;
+    }
+
+/* Wat is informatica CSS */
+
+.wii-intro {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 90vh;
+}
+
+	.wii-title {
+		font-size: 500%;
+	}
+
+	.wii-main {
+		display: flex;
+		flex-direction: column;
+		margin: 15vh 0;
+	}
+
+		.wii-desc {
+			font-size: 200%;
+			font-weight: 700;
+		}
+
+		.wii-ul {
+			list-style-type: circle;
+			padding: 2vh 0 0 5vw;
+			font-size: 150%;
+		}
+
+			.wii-li1 {
+				font-weight: 900;
+			}
+
+			.wii-li3 {
+				font-weight: 900;
+			}
+
+		.wii-chooser {
+			font-size: 400%;
+		}
+/* Buttons for next page and choosing CSS */
+
+.buttons {
+	display: flex;
+	justify-content: space-around;
+}
+
+	.button {
+		border: 3px solid #f9f9f9;
+		border-radius: 5px;
+		font-size: 150%;
+		padding: 1.5vh 2.5vw 1.5vh;
+		cursor: pointer;
+	}
